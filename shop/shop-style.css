@@ -1,0 +1,169 @@
+@import url("../remove-shopping-item-style.css");
+@import url("../shopping-item-style.css");
+@import url("../index-style.css");
+
+body {
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
+}
+
+/* important for hiding the scrollbar 
+yet having the scroll effect */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100vh;
+  width: 90vw;
+}
+
+/* sidebar css */
+.sidebar-filters {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  height: 100%;
+  width: 20%;
+
+  font-size: 1rem;
+}
+
+#colors label,
+#sizes label,
+#rating label,
+#price-range label {
+  display: block;
+  padding-left: 30px;
+  padding-bottom: 8px;
+}
+
+#colors,
+#sizes,
+#rating,
+#price-range {
+  border-bottom: 1px solid white;
+  padding-top: 20px;
+  width: 100%;
+}
+
+#apply-button {
+  display: block;
+  align-self: center;
+  padding-top: 20px;
+}
+
+#apply-filter {
+  padding: 10px 30px 10px 30px;
+}
+
+/* main-items-and-filters */
+.main-items-and-filters {
+  display: flex;
+  flex-direction: column;
+
+  /*
+    very important:
+    don't use justify-content: center;
+    
+    due to this the top div elements 
+    were not visible upon scroll;
+    
+    just remove justify-content: center;
+    it places all the content in the center of div 
+    and makes huge struggling which is not necessary in our case;
+    
+    just need to center elements on X-axis;
+    
+    flex and align-items are enough */
+  /* justify-content: center; */
+  align-items: flex-start;
+
+  margin-left: 50px;
+  height: 100%;
+  width: 100%;
+  /* position: relative; */
+  /* left: 300px; */
+
+  /* keeps the sidebar fixed and is only scrolling this container */
+  overflow-y: scroll;
+}
+
+/* this works in pair with the overflow feature */
+.main-items-and-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.search-container {
+  padding: 20px 0 20px 0;
+}
+
+.search-container,
+.search-container input {
+  width: 100%;
+}
+
+.search-container input {
+  padding: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.filter-container {
+  display: flex;
+
+  column-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 20px;
+
+  /* important so that the child nodes take 
+  the entire width of the parent */
+  width: 100%;
+}
+
+#filter {
+  padding: 15px 60px 15px 60px;
+  font-size: 1rem;
+
+  background-color: white;
+  color: black;
+}
+
+#filter:hover {
+  background-color: black;
+  color: white;
+}
+
+.clothing-items {
+  display: flex;
+  column-gap: 20px;
+  padding-bottom: 20px;
+
+  overflow-x: auto;
+}
+
+.clothing-items::-webkit-scrollbar {
+  width: 0;
+}
+
+/* learn scroll logic + positions */
+.mens-container,
+.womens-container,
+.jewellery-container,
+.electronics-container {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

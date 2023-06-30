@@ -1,0 +1,71 @@
+@import url("../index-style.css");
+
+/* details-container */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 80vh;
+}
+
+.details-container h1 {
+  align-self: self-start;
+  padding-left: 80px;
+
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.details-container input {
+  width: 90vw;
+  height: 60px;
+
+  margin: 10px;
+  padding: 10px;
+
+  font-size: 1rem;
+}
+
+#signup-button,
+#save-info,
+#change-pswrd,
+#logout-button,
+#login-button {
+  background-color: white;
+  color: black;
+
+  padding: 15px 60px 15px 60px;
+
+  align-self: self-start;
+  margin-left: 80px;
+
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+#signup-button:hover {
+  background-color: black;
+  color: white;
+}
+
+#save-info:hover {
+  background-color: black;
+  color: white;
+}
+
+#change-pswrd:hover {
+  background-color: black;
+  color: white;
+}
+
+#logout-button:hover {
+  background-color: black;
+  color: white;
+}
+
+#login-button:hover {
+  background-color: black;
+  color: white;
+}

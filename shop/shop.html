@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart Application</title>
+    <link rel="stylesheet" href="./shop-style.css">
+</head>
+
+<body>
+
+    <nav class="navigator">
+        <div id="meshop">Shopping Cart</div>
+        <div id="links">
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+            <a href="#">My Cart</a>
+            <a href="#">Profile</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="info-container">
+            <div class="sidebar-filters">
+                <div id="colors">
+                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Colors</p>
+                    <label for="red">
+                        <input type="checkbox" id="colors-item" value="red"> Red
+                    </label>
+                    <label for="red">
+                        <input type="checkbox" id="colors-item" value="blue"> Blue
+                    </label>
+                    <label for="red">
+                        <input type="checkbox" id="colors-item" value="green"> Green
+                    </label>
+                    <label for="red">
+                        <input type="checkbox" id="colors-item" value="black"> Black
+                    </label>
+                    <label for="red">
+                        <input type="checkbox" id="colors-item" value="white"> White
+                    </label>
+                </div>
+                <div id="sizes">
+                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Sizes</p>
+                    <label for="sm">
+                        <input type="checkbox" id="colors-item" value="sm"> S
+                    </label>
+                    <label for="med">
+                        <input type="checkbox" id="colors-item" value="med"> M
+                    </label>
+                    <label for="lg">
+                        <input type="checkbox" id="colors-item" value="lg"> L
+                    </label>
+                    <label for="xl">
+                        <input type="checkbox" id="colors-item" value="xl"> XL
+                    </label>
+                </div>
+                <div id="rating">
+                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Rating</p>
+                    <label for="range">
+                        <input type="range" min="0" max="5" step="1" id="range" list="steplist">
+                        <!-- why is this required ? -->
+                        <datalist id="steplist">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </datalist>
+                    </label>
+                </div>
+                <div id="price-range" style="border: none;">
+                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Price Range</p>
+                    <label for="25">
+                        <input type="checkbox" id="colors-item" value="25"> $0 to $25
+                    </label>
+                    <label for="50">
+                        <input type="checkbox" id="colors-item" value="50"> $25 to $50
+                    </label>
+                    <label for="100">
+                        <input type="checkbox" id="colors-item" value="100"> $50 to $100
+                    </label>
+                    <label for="onwards">
+                        <input type="checkbox" id="colors-item" value="onwards"> $100 onwards
+                    </label>
+                </div>
+                <div id="apply-button">
+                    <button id="apply-filter">Apply Filter</button>
+                </div>
+            </div>
+            <div class="main-items-and-filters">
+                <div class="search-container">
+                    <label for="search-item">
+                        <!-- unable to add the search icon -->
+                        <!-- <img src="../images/loupe.png" alt="search"> -->
+                        <input type="text" id="search-item" placeholder="Search">
+                    </label>
+                </div>
+                <div class="filter-container" id="filter-container">
+                    <button id="filter">All</button>
+                    <button id="filter">Mens</button>
+                    <button id="filter">Womens</button>
+                    <button id="filter">Jewellery</button>
+                    <button id="filter">Electronics</button>
+                </div>
+                <div class="mens-container">
+                    <p style="font-size: 1.8rem; font-weight: 600;">Men's Clothing</p>
+                    <div class="clothing-items">
+                        <div id="shopping-item">
+                            <div id="item-img">
+                                <img id="item-image" src="../images/tshirt.png" alt="item-img">
+                            </div>
+                            <div id="item-details">
+                                <div id="dollar-size">
+                                    <p id="price">$100</p>
+                                    <p id="size">S, M, L</p>
+                                </div>
+                                <div id="color">Colors :
+                                    <img src="../images/purple-moon.png" alt="">
+                                    <img src="../images/yellow-moon.png" alt="">
+                                    <img src="../images/green-moon.png" alt="">
+                                </div>
+                                <div id="rating">Rating :
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                </div>
+                            </div>
+                            <div id="add-to-cart">
+                                <button id="add-to-cart-button">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="womens-container">
+                    <p style="font-size: 1.8rem; font-weight: 600;">Women's Clothing</p>
+                    <div class="clothing-items">
+                        <div id="shopping-item">
+                            <div id="item-img">
+                                <img src="../images/tshirt.png" alt="item-img">
+                            </div>
+                            <div id="item-details">
+                                <div id="dollar-size">
+                                    <p id="price">$100</p>
+                                    <p id="size">S, M, L</p>
+                                </div>
+                                <div id="color">Colors :
+                                    <img src="../images/purple-moon.png" alt="">
+                                    <img src="../images/yellow-moon.png" alt="">
+                                    <img src="../images/green-moon.png" alt="">
+                                </div>
+                                <div id="rating">Rating :
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                </div>
+                            </div>
+                            <div id="add-to-cart">
+                                <button id="add-to-cart-button">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jewellery-container">
+                    <p style="font-size: 1.8rem; font-weight: 600;">Jewellery</p>
+                    <div class="clothing-items">
+                        <div id="shopping-item">
+                            <div id="item-img">
+                                <img src="../images/tshirt.png" alt="item-img">
+                            </div>
+                            <div id="item-details">
+                                <div id="dollar-size">
+                                    <p id="price">$100</p>
+                                    <p id="size">S, M, L</p>
+                                </div>
+                                <div id="color">Colors :
+                                    <img src="../images/purple-moon.png" alt="">
+                                    <img src="../images/yellow-moon.png" alt="">
+                                    <img src="../images/green-moon.png" alt="">
+                                </div>
+                                <div id="rating">Rating :
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                </div>
+                            </div>
+                            <div id="add-to-cart">
+                                <button id="add-to-cart-button">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="electronics-container">
+                    <p style="font-size: 1.8rem; font-weight: 600;">Electronics</p>
+                    <div class="clothing-items">
+                        <div id="shopping-item">
+                            <div id="item-img">
+                                <img src="../images/tshirt.png" alt="item-img">
+                            </div>
+                            <div id="item-details">
+                                <div id="dollar-size">
+                                    <p id="price">$100</p>
+                                    <p id="size">S, M, L</p>
+                                </div>
+                                <div id="color">Colors :
+                                    <img src="../images/purple-moon.png" alt="">
+                                    <img src="../images/yellow-moon.png" alt="">
+                                    <img src="../images/green-moon.png" alt="">
+                                </div>
+                                <div id="rating">Rating :
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                    <img src="../images/rating.png" alt="">
+                                </div>
+                            </div>
+                            <div id="add-to-cart">
+                                <button id="add-to-cart-button">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./shop-script.js"></script>
+</body>
+
+</html>

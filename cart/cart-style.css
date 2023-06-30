@@ -1,0 +1,78 @@
+@import url("../remove-shopping-item-style.css");
+@import url("../signup/signup-style.css");
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 90vw;
+}
+
+.grid-items {
+  display: grid;
+  grid-template-columns: repeat(3, 35%);
+  grid-template-rows: repeat(2, 48.5%);
+
+  gap: 20px 10px;
+}
+
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 80vh;
+}
+
+#checkout-list-container {
+  background-color: black;
+  color: white;
+
+  height: 100%;
+  width: 20vw;
+}
+
+#items-list {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.2rem;
+  line-height: 50px;
+}
+
+#list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#total {
+  width: 100%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#totals-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px 15px 40px;
+  font-size: 1.2rem;
+}
+
+#checkout-button {
+  background-color: white;
+  color: black;
+
+  padding: 15px 60px 15px 60px;
+
+  margin-left: 30px;
+  font-size: 1rem;
+  margin-top: 30px;
+}

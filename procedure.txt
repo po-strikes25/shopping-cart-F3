@@ -1,0 +1,26 @@
+basic html
+js scripting
+css styling
+
+User access tokens are generally obtained via a login dialog
+and require a person to permit your app to obtain one.
+This kind of access token is needed to modify and read app settings.
+
+If you're talking about the token identifying you as you and allowing you access to parts of whatever it is you're
+logging into, yes they are generated when you login.
+
+The website takes whatever credentials you entered, and compares them to the saved information in the database. If you
+login successfully, the website will send you a randomly generated (but cryptographically secure) token. This is saved
+in your browser, so that whenever you request access to a part of the site, your browser can show the token to identify
+itself as being logged on legitimately.
+
+If the site or the site’s authorization service is Oauth2.0 compliant, access tokens are generated as part of the
+authentication (login) process. Those tokens are valid for a configurable period of time and then must be
+regenerated/refreshed.
+
+Acces tokens can be persisted by client applications via cookie or some other caching mechanism and attached to HTTP
+requests against resources (URLs) that require authorization to acess.
+
+https://aaronparecki.com/oauth-2-simplified/
+
+https://www.google.com/search?q=what+is+OAuth+%3F&oq=what+is+OAuth+%3F&aqs=chrome..69i57.3682j0j1&sourceid=chrome&ie=UTF-8
