@@ -1,0 +1,268 @@
+section {
+  margin: 0;
+}
+
+.shop_section {
+  display: flex;
+  position: relative;
+}
+
+.filter_container {
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+  width: 195px;
+  height: 550px;
+  padding-left: 15px;
+  padding-top: 10px;
+  position: fixed;
+  top: 72px;
+  left: 10px;
+}
+
+.filter_container > input {
+  margin-top: 10px;
+}
+
+.colors_filter,
+.sizes_filter,
+.rating_filter,
+.price_filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter label {
+  font-size: 12px;
+}
+
+.filter input {
+  height: 10px;
+}
+
+.filter input[type="checkbox"] {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.rating_filter input {
+  margin: 0 10px;
+}
+
+.range {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+
+#filter_btn,
+.filter_btn {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 120px;
+  height: 35px;
+  margin: 20px 20px;
+  padding: 5px 10px;
+  border: 1px solid white;
+}
+
+.shop_screen {
+  background-color: white;
+  color: black;
+  width: 80%;
+  margin: 72px -25px;
+  position: absolute;
+  top: 0px;
+  left: 265px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.search-bar {
+  position: relative;
+  height: 15px;
+  width: 98%;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.search-bar span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.search-bar .search_icon {
+  color: black;
+}
+
+.search-bar input {
+  width: 95%;
+  height: 98%;
+  height: 30px;
+  padding-left: 40px;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border: 1px solid gray;
+}
+
+.filter_btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.filter_btn {
+  margin: 0 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 85px;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  border: 1px solid black;
+}
+
+.filter_btn_active {
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  border: 1px solid black;
+}
+
+.cloths_container h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.cloths_card_container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin: 5px 10px;
+}
+
+.card {
+  border: 1px solid black;
+  font-weight: 900;
+  color: black;
+  width: 225px;
+  position: relative;
+}
+
+.product_details {
+  margin: 5px 5px;
+  padding-bottom: 5px;
+}
+
+.card img {
+  width: 90%;
+  height: 290px;
+  padding: 10px;
+}
+
+.price_size {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cloths_color {
+  margin-left: 10px;
+}
+
+.cloths_color span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: sienna;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.material-icons {
+  color: #f8ce37;
+}
+
+.add_to_cart_btn-container {
+  background-color: black;
+  height: 50px;
+}
+
+.add_to_cart_btn-container button {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+.product_descriptions {
+  visibility: hidden;
+  background: transparent;
+  width: 90%;
+  height: 290px;
+  font-weight: lighter;
+  padding: 40px 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product_title {
+  position: absolute;
+  top: 50px;
+}
+
+.product_description {
+  position: absolute;
+  top: 140px;
+}
+
+.product_title::before {
+  content: "Title";
+  display: inline;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.product_description::before {
+  content: "Description";
+  display: inline;
+  position: absolute;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 16px;
+  font-weight: bolder;
+}

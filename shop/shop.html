@@ -3,229 +3,123 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Shopping Cart Application</title>
-    <link rel="stylesheet" href="./shop-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;1,200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="./shop.css">
+    <title>Shop</title>
 </head>
 
 <body>
-
-    <nav class="navigator">
-        <div id="meshop">Shopping Cart</div>
-        <div id="links">
-            <a href="#">Home</a>
-            <a href="#">Login</a>
-            <a href="#">Signup</a>
-            <a href="#">My Cart</a>
-            <a href="#">Profile</a>
-        </div>
-    </nav>
-
-    <section>
-        <div class="info-container">
-            <div class="sidebar-filters">
-                <div id="colors">
-                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Colors</p>
-                    <label for="red">
-                        <input type="checkbox" id="colors-item" value="red"> Red
-                    </label>
-                    <label for="red">
-                        <input type="checkbox" id="colors-item" value="blue"> Blue
-                    </label>
-                    <label for="red">
-                        <input type="checkbox" id="colors-item" value="green"> Green
-                    </label>
-                    <label for="red">
-                        <input type="checkbox" id="colors-item" value="black"> Black
-                    </label>
-                    <label for="red">
-                        <input type="checkbox" id="colors-item" value="white"> White
-                    </label>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_left_container">
+                <span>MeShop.</span>
+            </div>
+            <div class="navbar_right_container">
+                <a href="../index.html">Home</a>
+                <a href="../login/login.html">Login</a>
+                <a href="../signup/signup.html">Signup</a>
+                <a href="../cart/cart.html">My Cart</a>
+                <a href="../profile/profile.html">Profile</a>
+            </div>
+        </nav>
+    </header>
+    <section class="shop_section">
+        <aside class="filter_container">
+            <div class="colors_filter">
+                <h2>Colors</h2>
+                <div class="filter">
+                    <input type="checkbox" name="Red">
+                    <label for="Red">Red</label>
                 </div>
-                <div id="sizes">
-                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Sizes</p>
-                    <label for="sm">
-                        <input type="checkbox" id="colors-item" value="sm"> S
-                    </label>
-                    <label for="med">
-                        <input type="checkbox" id="colors-item" value="med"> M
-                    </label>
-                    <label for="lg">
-                        <input type="checkbox" id="colors-item" value="lg"> L
-                    </label>
-                    <label for="xl">
-                        <input type="checkbox" id="colors-item" value="xl"> XL
-                    </label>
+                <div class="filter">
+                    <input type="checkbox" name="Blue">
+                    <label for="Blue">Blue</label>
                 </div>
-                <div id="rating">
-                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Rating</p>
-                    <label for="range">
-                        <input type="range" min="0" max="5" step="1" id="range" list="steplist">
-                        <!-- why is this required ? -->
-                        <datalist id="steplist">
-                            <option>0</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </datalist>
-                    </label>
+                <div class="filter">
+                    <input type="checkbox" name="Green">
+                    <label for="Green">Green</label>
                 </div>
-                <div id="price-range" style="border: none;">
-                    <p style="padding-bottom: 8px; padding-left: 30px; font-size: 1.2rem;">Price Range</p>
-                    <label for="25">
-                        <input type="checkbox" id="colors-item" value="25"> $0 to $25
-                    </label>
-                    <label for="50">
-                        <input type="checkbox" id="colors-item" value="50"> $25 to $50
-                    </label>
-                    <label for="100">
-                        <input type="checkbox" id="colors-item" value="100"> $50 to $100
-                    </label>
-                    <label for="onwards">
-                        <input type="checkbox" id="colors-item" value="onwards"> $100 onwards
-                    </label>
+                <div class="filter">
+                    <input type="checkbox" name="Black">
+                    <label for="Black">Black</label>
                 </div>
-                <div id="apply-button">
-                    <button id="apply-filter">Apply Filter</button>
+                <div class="filter">
+                    <input type="checkbox" name="White">
+                    <label for="White">White</label>
                 </div>
             </div>
-            <div class="main-items-and-filters">
-                <div class="search-container">
-                    <label for="search-item">
-                        <!-- unable to add the search icon -->
-                        <!-- <img src="../images/loupe.png" alt="search"> -->
-                        <input type="text" id="search-item" placeholder="Search">
-                    </label>
+            <div class="sizes_filter">
+                <h2>Sizes</h2>
+                <div class="filter">
+                    <input type="checkbox" name="small">
+                    <label for="small">S</label>
                 </div>
-                <div class="filter-container" id="filter-container">
-                    <button id="filter">All</button>
-                    <button id="filter">Mens</button>
-                    <button id="filter">Womens</button>
-                    <button id="filter">Jewellery</button>
-                    <button id="filter">Electronics</button>
+                <div class="filter">
+                    <input type="checkbox" name="medium">
+                    <label for="medium">M</label>
                 </div>
-                <div class="mens-container">
-                    <p style="font-size: 1.8rem; font-weight: 600;">Men's Clothing</p>
-                    <div class="clothing-items">
-                        <div id="shopping-item">
-                            <div id="item-img">
-                                <img id="item-image" src="../images/tshirt.png" alt="item-img">
-                            </div>
-                            <div id="item-details">
-                                <div id="dollar-size">
-                                    <p id="price">$100</p>
-                                    <p id="size">S, M, L</p>
-                                </div>
-                                <div id="color">Colors :
-                                    <img src="../images/purple-moon.png" alt="">
-                                    <img src="../images/yellow-moon.png" alt="">
-                                    <img src="../images/green-moon.png" alt="">
-                                </div>
-                                <div id="rating">Rating :
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                </div>
-                            </div>
-                            <div id="add-to-cart">
-                                <button id="add-to-cart-button">Add To Cart</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="filter">
+                    <input type="checkbox" name="large">
+                    <label for="large">L</label>
                 </div>
-                <div class="womens-container">
-                    <p style="font-size: 1.8rem; font-weight: 600;">Women's Clothing</p>
-                    <div class="clothing-items">
-                        <div id="shopping-item">
-                            <div id="item-img">
-                                <img src="../images/tshirt.png" alt="item-img">
-                            </div>
-                            <div id="item-details">
-                                <div id="dollar-size">
-                                    <p id="price">$100</p>
-                                    <p id="size">S, M, L</p>
-                                </div>
-                                <div id="color">Colors :
-                                    <img src="../images/purple-moon.png" alt="">
-                                    <img src="../images/yellow-moon.png" alt="">
-                                    <img src="../images/green-moon.png" alt="">
-                                </div>
-                                <div id="rating">Rating :
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                </div>
-                            </div>
-                            <div id="add-to-cart">
-                                <button id="add-to-cart-button">Add To Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="jewellery-container">
-                    <p style="font-size: 1.8rem; font-weight: 600;">Jewellery</p>
-                    <div class="clothing-items">
-                        <div id="shopping-item">
-                            <div id="item-img">
-                                <img src="../images/tshirt.png" alt="item-img">
-                            </div>
-                            <div id="item-details">
-                                <div id="dollar-size">
-                                    <p id="price">$100</p>
-                                    <p id="size">S, M, L</p>
-                                </div>
-                                <div id="color">Colors :
-                                    <img src="../images/purple-moon.png" alt="">
-                                    <img src="../images/yellow-moon.png" alt="">
-                                    <img src="../images/green-moon.png" alt="">
-                                </div>
-                                <div id="rating">Rating :
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                </div>
-                            </div>
-                            <div id="add-to-cart">
-                                <button id="add-to-cart-button">Add To Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="electronics-container">
-                    <p style="font-size: 1.8rem; font-weight: 600;">Electronics</p>
-                    <div class="clothing-items">
-                        <div id="shopping-item">
-                            <div id="item-img">
-                                <img src="../images/tshirt.png" alt="item-img">
-                            </div>
-                            <div id="item-details">
-                                <div id="dollar-size">
-                                    <p id="price">$100</p>
-                                    <p id="size">S, M, L</p>
-                                </div>
-                                <div id="color">Colors :
-                                    <img src="../images/purple-moon.png" alt="">
-                                    <img src="../images/yellow-moon.png" alt="">
-                                    <img src="../images/green-moon.png" alt="">
-                                </div>
-                                <div id="rating">Rating :
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                    <img src="../images/rating.png" alt="">
-                                </div>
-                            </div>
-                            <div id="add-to-cart">
-                                <button id="add-to-cart-button">Add To Cart</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="filter">
+                    <input type="checkbox" name="extra-large">
+                    <label for="extra-large">XL</label>
                 </div>
             </div>
-        </div>
+            <div class="rating_filter">
+                <h2>Rating</h2>
+                <input type="range" min="0" max="5" step="1">
+                <div class="range">
+                    <span>0</span>
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="price_filter">
+                <h2>Price Range</h2>
+                <div class="filter">
+                    <input type="checkbox" name="0_25">
+                    <label for="0_25">$0 to $25</label>
+                </div>
+                <div class="filter">
+                    <input type="checkbox" name="25_50">
+                    <label for="25_50">$25 to $50</label>
+                </div>
+                <div class="filter">
+                    <input type="checkbox" name="50_100">
+                    <label for="50_100">$50 to $100</label>
+                </div>
+                <div class="filter">
+                    <input type="checkbox" name="100_onwards">
+                    <label for="100_onwards">$100 onwards</label>
+                </div>
+            </div>
+            <button id="filter_btn">Apply Filter</button>
+        </aside>
+        <main class="shop_screen">
+            <div class="search-bar">
+                <span class="material-icons search_icon">search</span>
+                <input type="text" placeholder="Search" id="search_product">
+            </div>
+            <div class="filter_btns">
+                <button class="filter_btn filter_btn_active" id="no_filter" data-category="no_filter">All</button>
+                <button class="filter_btn" id="mens_filter" data-category="men's clothing">Mens</button>
+                <button class="filter_btn" id="womens_filter" data-category="women's clothing">Womens</button>
+                <button class="filter_btn" id="jewellery_filter" data-category="jewelery">Jewellery</button>
+                <button class="filter_btn" id="electronics_filter" data-category="electronics">Electronics</button>
+            </div>
+            <div class="data_container"></div>
+        </main>
     </section>
-
-    <script src="./shop-script.js"></script>
+    <script src="./shop.js"></script>
 </body>
 
 </html>

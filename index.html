@@ -3,40 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Shopping Cart Application</title>
-    <link rel="stylesheet" href="./index-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Home</title>
 </head>
 
 <body>
-
-    <nav class="navigator">
-        <div id="meshop">MeShop</div>
-        <div id="links">
-            <a href="#">Home</a>
-            <a href="#">Login</a>
-            <a href="#">Signup</a>
-            <a href="#">My Cart</a>
-            <a href="#">Profile</a>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_left_container">
+                <span>MeShop.</span>
+            </div>
+            <div class="navbar_right_container">
+                <a href="#">Home</a>
+                <a href="./login/login.html">Login</a>
+                <a href="./signup/signup.html">Signup</a>
+                <a href="./cart/cart.html">My Cart</a>
+                <a href="./profile/profile.html" id="profile_link_tag">Profile</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="about">
+            <h1>MeShop.</h1>
+            <p>Your First Shop built on HTML,CSS AND JavaScript</p>
         </div>
-    </nav>
-
-    <section class="signup-login-container">
-        <div id="header">
-            <h1>MeShop</h1>
-            <p>Your first shop built on HTML, CSS and Javascript</p>
-            <div id="buttons">
+        <div class="buttons_photo_container">
+            <div class="btn_container">
                 <button id="login">Login</button>
                 <button id="signup">Signup</button>
             </div>
-        </div>
-        <div id="poster">
-            <img src="./images/landingPagePic.png" alt="shopping-poster">
+            <div class="photo_conatiner">
+                <img src="./images/home.png" alt="">
+            </div>
         </div>
     </section>
-
-    <script src="./index-script.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

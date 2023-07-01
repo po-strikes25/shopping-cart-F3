@@ -1,0 +1,6 @@
+.my_profile_form h1,
+.edit_password_form h1 {
+  text-align: center;
+  font-weight: 900 !important;
+  margin-top: -5px;
+}
